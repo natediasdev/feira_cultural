@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #ffffff;
+    --gray: #3d3d3d;
+    --offWhite: #f5eedb;
+    --red: #ee161f;
+    --red2: #a10e15;
+    --lime: #a7cf36;
+    --light-gray: #cacaca;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: var();
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    min-height: 50px;
+    background: var(--gray);
+    z-index: 10;
+}
+
+nav span {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+}
+
+nav span img {
+    height: 100%;
+}
+
+nav ul {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 1.3em;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+nav ul li a {
+    color: var(--offWhite);
+    text-decoration: none;
+}
+
+nav ul li::after {
+    content: '';
+    width: 0px;
+    height: 1px;
+    display: block;
+    background: var(--offWhite);
+    transition: 300ms;
+}
+
+nav ul li:hover a {
+    color: var(--lime);
+    
+}
+
+nav ul li:hover::after {
+    width: 100%;
+    background: var(--lime);
+}
+
+.conteudo .home {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteudo .home h1 {
+    font-size: 4em;
+    display: inline-block;
+    font-weight: 300;
+    font-variant: small-caps;
+}
+
+.conteudo .intro {
+    background: var(--light-gray);
+    margin: 20px;
+    padding: 30px;
+    border-radius: 10px;
+    font-size: 1.4em;
+    font-weight: 600;
+    font-style: italic;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo .aspectos article {
+    font-size: 1.2em;
+    margin: 15px;
+    padding: 5px;
+
+}
+
+
+
+
+footer {
+    background: var(--light-gray);
+    color: var(--red2);
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
