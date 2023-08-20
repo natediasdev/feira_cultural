@@ -34,18 +34,18 @@ nav {
 
 nav span {
     position: absolute;
+    padding: 5px;
     height: 100%;
-    width: 10%;
-}
-
-nav span img {
-    height: 100%;
+    width: 20%;
+    background: url('../images/Bandeira_de_Santa_Catarina.png') center center;
+    background-size: cover;
 }
 
 nav ul {
     position: absolute;
+    padding: 10px;
     right: 0;
-    width: 90%;
+    width: 80%;
     height: 100%;
     display: flex;
     justify-content: space-around;
@@ -54,7 +54,7 @@ nav ul {
 
 nav ul li {
     list-style: none;
-    font-size: 1.3em;
+    font-size: 1.1em;
     transition: all .5s ease-in-out;
     cursor: pointer;
 }
@@ -85,6 +85,7 @@ nav ul li:hover::after {
 
 .conteudo .home {
     position: relative;
+    padding-top: 50px;
     min-height: 100vh;
     width: 100%;
     display: flex;
@@ -93,21 +94,34 @@ nav ul li:hover::after {
     flex-direction: column;
 }
 
+.conteudo .home::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 90%;
+    bottom: 3%;
+    background: var(--red2);
+}
+
 .conteudo .home h1 {
+    width: 100%;
+    padding: 30px;
     font-size: 4em;
-    display: inline-block;
     font-weight: 300;
+    text-align: center;
+    line-height: .9em;
     font-variant: small-caps;
 }
 
 .conteudo .home .intro {
     max-width: 800px;
     background: var(--light-gray);
-    font-size: 1.4em;
+    font-size: 1.1em;
     font-weight: 600;
     font-style: italic;
     margin: 20px;
-    padding: 70px 40px;
+    padding: 20px;
+    text-align: center;
     border-radius: 20px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
@@ -120,42 +134,117 @@ nav ul li:hover::after {
 }
 
 .conteudo .aspectos h1 {
-    max-width: 300px;
+    max-width: 200px;
     background-color: var(--light-gray);
-    font-size: 2.6em;
+    font-size: 2em;
     text-align: center;
-    padding: 20px;
+    padding: 5px 25px;
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.conteudo .aspectos h2 {
+    margin-top: 15px;
+}
+
 .conteudo .aspectos article {
     width: 100%;
-    font-size: 1.2em;
-    margin: 15px;
+    font-size: 1.1em;
     padding: 15px;
     text-align: justify;
 }
 
-.conteudo .aspectos article p {
-    max-width: 800px;
+.conteudo .aspectos article.historia {
+    margin: 15px 0px;
 }
 
 .conteudo .aspectos article div {
-    max-width: 400px;
+    max-width: 800px;
+    margin-right: 0;
+}
+
+.conteudo .aspectos article .box {
+    margin-top: 20px;
+}
+
+.conteudo .aspectos article .box div.img {
+    margin-bottom: 15px;
+    max-width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    background: var(--img);
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.conteudo .conclusao {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+    background: var(--light-gray);
+    color: var(--gray);
+    text-align: justify;
 }
 
 footer {
     background: var(--light-gray);
     color: var(--red2);
+    margin-top: 30px;
     padding: 10px;
     display: flex;
     justify-content: space-around;
     align-items: center;
 }
 
-@media (max-width: 800px) {
-    .conteudo .aspectos article img {
+@media (min-width: 800px) {
+    nav {
+        height: 75px;
+    }
 
+    nav span {
+        width: 8%;
+    }
+
+    nav ul {
+        width: 92%;
+        font-size: 1.4em;
+    }
+
+    .conteudo .home h1 {
+        font-size: 5em;
+    } 
+
+    .conteudo .home .intro {
+        max-width: 900px;
+        font-size: 1.4em;
+    }
+
+    .conteudo .aspectos {
+        font-size: 1.2em;
+    }
+
+    .conteudo .aspectos article {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .conteudo .aspectos article div {
+        max-width: 60%;
+        flex-direction: column;
+    }
+
+    .conteudo .aspectos article .box {
+        margin-top: 0px;
+    }
+
+    .conteudo .aspectos article .box div.img {
+        width: 400px;
+        height: 180px;
+        margin: 10px;
+    }
+
+    .conteudo .conclusao {
+        font-size: 1.1em;
     }
 }
